@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - SAEP 2025</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+     <link rel="stylesheet" th:href="@{/css/home.css}">
+   
+</head>
+<body>
+<div class="login-container">
+    <h2>Login SAEP</h2>
+    <form th:action="@{/login}" method="post">
+        <input type="text" name="username" placeholder="E-mail" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <p th:if="${param.error}" class="msg">Usuário ou senha inválidos!</p>
+    <p th:if="${param.logout}" class="msg">Logout realizado com sucesso!</p>
+    <div class="text-center mt-3">
+        <p>Não tem conta?<a th:href="@{/usuarios/novo}" class="btn-link">Cadastre-se</a></p>
+    </div>
+
+    <p th:if="${mensagemSucesso}" class="msg-sucesso" th:text="${mensagemSucesso}"></p>
+</div>
+</body>
+</html>
