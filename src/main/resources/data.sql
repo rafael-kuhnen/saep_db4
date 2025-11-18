@@ -19,8 +19,7 @@ VALUES ('Karize', 'karize@saep.com',
 INSERT INTO tipo (descricao) VALUES
 ('Corante'),
 ('Alvejante'),
-('Auxiliar'),
-('Não definido');
+('Auxiliar');
 
 -- PRODUTOS INICIAIS
 INSERT INTO produto (descproduto, unidmedida, estoqueatual, estoqueminimo, idtipo)

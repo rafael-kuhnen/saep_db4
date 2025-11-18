@@ -36,7 +36,7 @@ public class UsuarioController {
     public String salvar(@ModelAttribute Usuario usuario) {
         usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         usuarioRepository.save(usuario);
-        return "redirect:/login?cadastroSucesso=true";
+        return "redirect:/usuarios";
     }
 
     @GetMapping("/editar/{id}")
