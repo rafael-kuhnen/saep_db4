@@ -38,6 +38,8 @@
             </form>
           </li>
           <li class="nav-item"><a class="nav-link"></a></li>
+          <li class="nav-item"><span class="nav-item" th:text="${usuarioNome}" style="color: aliceblue;" >Usuário</span></li>
+          <li class="nav-item"><a class="nav-link"></a></li>
         </ul> 
         <form th:action="@{/logout}" method="post" class="d-inline">
           <button type="submit" class="btn btn-sm btn-logout btn-success"><i class="bi bi-box-arrow-right">Sair</i> </button>
